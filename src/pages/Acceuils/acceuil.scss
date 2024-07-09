@@ -1,0 +1,156 @@
+$blueClair: #1c8ff0;
+$bleuFoncer: #2c3e50;
+$blanc: #e9ecf1;
+$noir: #2e2e30;
+$vert: #06bf3a;
+$shadow: 2px 2px 9px rgba(192, 191, 191, 0.336);
+$paddingParent: 1% 8%;
+$paddingChild:2%; 
+
+* {
+  font-family: "Nutino" sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: $shadow;
+  line-height: 1.2em;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: $blanc;
+}
+
+
+.graphContainer{
+    padding: $paddingParent;
+    width: 100%;
+    height: auto;
+   
+    
+    .container{
+        background: white;
+        padding: $paddingChild;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+
+
+        .graph{
+            width: 300px;
+            height: 300px;
+            border: 1px solid $bleuFoncer;
+            border-radius: 24px;
+            box-shadow: $shadow;
+        }
+        .graph1{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            align-items: center;
+        }
+
+    }
+}
+
+.pieChart{
+  
+    display: flex;
+    align-items: center;
+    margin-left: 22%;
+}
+.Date{
+    display: flex;
+    justify-content: space-between;
+    padding: 10% 2% 0% 2%;
+    align-items: center;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+
+}
+
+.info{
+    width: 100%;
+    height: auto;
+    padding: 1% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 30px ;
+    flex-direction: row;
+    margin-top: -8%;
+
+   .item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .dot{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        
+    }
+   }
+}
+
+.graph3{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 2px;
+    color: $noir;
+    
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+    
+
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $blueClair;
+        border-radius: 12px;
+    }
+    &::-webkit-scrollbar-track{
+        background: rgba(223, 222, 222, 0.767);
+    }
+       gap: 20px;
+       
+        
+       .content{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        box-shadow: $shadow;
+        .descrip{
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .time{
+            color: gray;
+          }
+        }
+             
+            img{
+                padding: 2%;
+                border-radius: 50%;
+                background: $blanc;
+             
+                width: 30px;
+                height: 30px;
+            }
+       } 
+    }
+}
